@@ -1,0 +1,116 @@
+\documentclass[mathserif]{beamer}
+\usepackage{graphicx}
+\usetheme{Frankfurt}
+\useinnertheme{rounded}
+
+\title{Shorting pin loaded dual-band compact rectangular microstrip antenna}
+\author{Chaitanya Pande and
+Swrangsar Basumatary}
+\institute{IIT Bombay, Powai}
+\date{November 27, 2013}
+
+    
+\begin{document}
+    \frame{\titlepage}
+    
+    \begin{frame}{LEDs vs Laser Diodes for short-range communication}
+	    \pause
+	    \textbf{Why use LEDs when Laser Diodes are faster?}
+            \pause For broadband short-range optical fiber communications, like
+LANs and Fiber-in-the-Home networks, LEDs are:
+            \pause
+            \begin{itemize}[<+->]
+                \item cheaper
+                \item safer for the human eyes
+                \item less sensitive to temperature variations
+                \item and more durable
+            \end{itemize}
+  
+        \pause
+        \textbf{Disadvantage of using LEDs}
+            \begin{itemize}
+                \pause \item The problem with LED is \pause \emph{low modulation rate!}\\
+                \pause \item While laser diodes have reached to tens of Gbps, \pause 
+                commercial DH-LED (double heterostructure) is still limited at 100 Mbps.
+            \end{itemize}
+        
+    \end{frame}
+    
+    \begin{frame}{Efforts that were not successful}
+        \pause
+        Efforts have been made to get upto 500 Mbps for conventional LEDs using
+        \begin{itemize}
+            \pause \item multilevel Pulse Amplitude Modulation (M-PAM)
+            \pause \item and discrete multitone modulation (DMT) \\~\\
+        \end{itemize} 
+        
+        \pause But these techniques are \emph{highly complex} compared to the simple on-off keying (OOK) direct modulation scheme.
+    \end{frame}
+    
+    
+    
+    \begin{frame}{Limitations of OOK modulation rate for LED}
+        \pause
+        OOK direct modulation rate of LED is limited by two factors:
+        
+        \begin{enumerate}
+            
+            \pause \item spontaneous carrier recombination lifetime
+            \begin{itemize}
+                \pause \item depends on the material and thus it's beyond our control
+                \pause \item typically in the range of a few nanoseconds
+            \end{itemize}
+            
+            \pause \item response time (rise time + decay time) of the LED  
+            \begin{itemize}
+                \pause \item depends on capacitance and dynamic resistance of p-n junctions
+                \pause \item \emph{but this can be controlled!} \\~\\
+            \end{itemize}
+            
+        \end{enumerate}
+        
+        \pause
+        So, the only way to increase OOK modulation rate of LED is by \emph{reducing the rise and decay times of the \textbf{EL} signal.}       
+    \end{frame}
+
+
+   
+    \begin{frame}{Ways to reduce the response time}
+        \pause
+        We look at \emph{two} promising ways of improving the response time of the LED have been found upto now
+        \begin{enumerate}
+            \pause \item using highly-doped InGaAsP/InP Surface Emitting LED with high current density
+            \pause \item using Novel LED's driver circuit \\~\\
+        \end{enumerate}
+     \end{frame}
+    
+    
+    \begin{frame}{Response of an InGaAsP/InP SE LED}
+        \pause
+        In an undoped InGaAsP/InP Surface Emitting LED
+        \begin{itemize}
+            \pause \item the rise time decreases with increasing current
+            \pause \item but the decay time is higher than the rise time and independent of current
+        \end{itemize}
+        \pause
+ 	    \begin{figure}
+             \centering
+%             \includegraphics[height=0.4\textheight]{undopedSCLEDResponse.png}
+        \end{figure}
+        \pause
+        But with \emph{heavy zinc-doping concentration} in the active layer and low impedance driving circuit the fall time decreases.
+    \end{frame}
+    
+    
+
+    
+    \begin{frame}{References}
+        \pause
+        \begin{itemize}
+                 \item P. H. Binh, V. D. Trong, C.T. Anh, P. Renucci, X. Marie, C. T. Truong, A. T. Pham, ``Novel LED's Driver Circuit for Broadband Short-Range Optical Fiber Communication Systems,'' \emph{Communications and Electronics (ICCE), 2012 Fourth International Conference on}.
+                 \item Akira Suzuki, Toshio Uji, Yasumasa Inomoto, Junji Hayashi, Yoichi Isoda, and Hidenori Nomura, ``InGaAsP/InP 1.3-$\mu$m Wavelength Surface-Emitting LED's for High-Speed Short-Haul Optical Communication Systems,'' \emph{IEEE Transactions on Electron Devices}, December 1985.
+        \end{itemize}
+    \end{frame}
+    
+    
+\end{document}
